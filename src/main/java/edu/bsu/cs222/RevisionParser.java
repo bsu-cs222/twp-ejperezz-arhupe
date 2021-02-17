@@ -10,7 +10,7 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 
-public class WikipediaRevisionParser {
+public class RevisionParser {
     public Object parse(InputStream stream) throws IOException {
         JSONArray results = JsonPath.read(stream, "$..revisions");
         return results.get(0);

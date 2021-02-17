@@ -27,8 +27,6 @@ public class WikipediaRevisionReader {
 
         System.exit(0);
     }
-
-
     private String getWikipediaData(String input) {
         try {
             URL urlWiki =  new URL("https://en.wikipedia.org/w/api.php?action=query&format=json&prop=revisions&titles=Muncie,_Indiana&rvprop=timestamp|user&rvlimit=30&redirects");
@@ -47,8 +45,8 @@ public class WikipediaRevisionReader {
            // String resultsString = results.toString();
 
             //TODO: figure out how to parse results and not have multiple calls
-          //   JSONObject jsonObject = new JSONObject(resultsString);
-          //  JSONArray arr = jsonObject.getJSONArray("user");
+            //JSONObject jsonObject = new JSONObject(resultsString);
+            //JSONArray arr = jsonObject.getJSONArray("user");
 
             JSONArray resultsTimeStamp = JsonPath.read(inputStream, "$..timestamp");
             String[] timeStamps = new String[resultsTimeStamp.size()];

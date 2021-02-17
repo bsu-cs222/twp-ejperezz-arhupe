@@ -1,16 +1,14 @@
 package edu.bsu.cs222;
-
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 import java.io.InputStream;
 
-public class WikipediaRevisionParserTest {
+public class RevisionParserTest {
     @Test
     public void testParse(){
-        WikipediaRevisionParser parser = new WikipediaRevisionParser();
-
+        RevisionParser parser = new RevisionParser();
         InputStream inputStream = Thread.currentThread().getContextClassLoader().getResourceAsStream("wikiTestData");
         String results = null;
         try {
