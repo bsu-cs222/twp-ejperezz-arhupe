@@ -1,8 +1,8 @@
 package edu.bsu.cs222;
+//import java.io.IOException;
 import java.util.Scanner;
 
-public class RevisionReader {
-    //throws IOException
+public class RevisionReader  {
     public static void main(String[] args) {
         System.out.println("Enter wikipedia name: \n");
         Scanner in = new Scanner(System.in);
@@ -11,13 +11,13 @@ public class RevisionReader {
         }
         String input = in.nextLine();
         RevisionReader reader = new RevisionReader();
-        String results = reader.getWikipediaData(input);
+        String results = reader.WikipediaData(input);
         System.out.println("The results you're trying to see are \n" + results);
         System.exit(0);
     }
-    private String getWikipediaData(String input) {
-        GetWikipediaData jsonData = new GetWikipediaData();
-        return jsonData.getWikipediaData(input);
+    private String WikipediaData(String input)  {
+        WikipediaData jsonData = new WikipediaData();
+        return jsonData.WikipediaData(input);
     }
 
 
